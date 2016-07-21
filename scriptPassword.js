@@ -17,7 +17,7 @@ module.exports.hash = function (pass) {
 };
 
 
-module.exports.testhash = function (pass, crypt) {
+module.exports.testHash = function (pass, crypt) {
   
   if (crypt.length !== 320) {
     return false;
