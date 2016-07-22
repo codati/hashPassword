@@ -41,7 +41,6 @@ module.exports.randomGenerate = function () {
   var randomBuf = crypto.randomBytes(16)
   var timetempsBuf = new Buffer(8);
   timetempsBuf.writeUIntLE(Date.now(), 0, 8);
-  console.log(timetempsBuf.toString('base64'));
   var result = Buffer.concat([randomBuf, timetempsBuf]).toString('base64');
 
   return result;
